@@ -14,7 +14,7 @@ namespace CalculoCPF
             int resto=0;
             int rs1=0;
             int rs2=0;
-            string cpffinal
+            string cpffinal;
 
             cpfcliente = "46992444832";
             cpf9 = cpfcliente.Substring(0,9);
@@ -31,7 +31,7 @@ namespace CalculoCPF
             cpf10 = cpf9+(11-resto);
             
 
-            for(int i=0; i < cpf10.Length;i--)
+            for(int i=0; i < cpf10.Length;i++)
             {
                 rs2 += int.Parse(cpf10[i].ToString())*contagem2;
                 contagem2--;
@@ -41,12 +41,7 @@ namespace CalculoCPF
             cpffinal = cpf10 + 0;
             else
             cpffinal = cpf10+(11-resto);
+            Console.WriteLine("O seu CPF é: "+cpffinal);
         }
-
-            
-
-            
-
-
     }
 }
